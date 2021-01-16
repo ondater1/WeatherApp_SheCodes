@@ -1,0 +1,108 @@
+body {
+  background-position: center;
+  background-image: url("https://images.pexels.com/photos/961402/pexels-photo-961402.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+hr {
+  background-color: #d5bdc2;
+}
+
+.date{
+  text-align: center;
+  margin: 0px auto;
+}
+
+.container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 10px 30px 10px 40px;
+  border: 1px solid #330867;
+  border-radius: 15px;
+  background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+  color: white;
+  font-family: "Raleway", sans-serif;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.today {
+  margin: 0px auto;
+  padding: 0px auto;
+}
+
+.degrees {
+  font-size: 56px;
+}
+
+.units {
+  position: relative;
+  font-size: 15px;
+  top: -24px;
+}
+
+.weather-icon-today {
+  font-size: 120px;
+  text-align: left;
+  margin-top: 50px;
+}
+
+.weather-description {
+  text-align: center;
+}
+
+.city-name {
+  font-weight: bold;
+  font-size: 35px;
+  color: #d5bdc2;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+}
+
+.forecast {
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  font-size: 10px;
+}
+
+.weather-icon {
+  font-size: larger;
+}
+
+.search-bar {
+  text-align: left;
+  margin: 0 0 20px;
+}
+
+.search-line-padding {
+  padding-right: 5px;
+}
+
+.search-button-padding {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.current-location-button-padding {
+  padding-left: 5px;
+}
+.current-location-button {
+  border-radius: 50px;
+  padding: 1 2 1 6px;
+  border: 1px;
+}
