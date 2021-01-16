@@ -27,12 +27,12 @@ hr {
 }
 
 .container {
-  max-width: 700px;
+  width: 70%;
   margin: 30px auto;
   padding: 10px 30px 10px 40px;
   border: 1px solid #330867;
   border-radius: 15px;
-  background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+  background: rgba(129, 51, 5, 0.7);
   color: white;
   font-family: "Raleway", sans-serif;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
