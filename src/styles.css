@@ -21,11 +21,6 @@ hr {
   background-color: #d5bdc2;
 }
 
-.date{
-  text-align: center;
-  margin: 0px auto;
-}
-
 .container {
   width: 600px;
   max-width: 90%;
@@ -37,6 +32,11 @@ hr {
   color: white;
   font-family: "Raleway", sans-serif;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.date{
+  text-align: center;
+  margin: 0px auto;
 }
 
 .today {
@@ -54,7 +54,6 @@ hr {
   font-weight: bold;
   cursor: default;
 }
-
 .degrees .active:hover {
   text-decoration: none;
 }
@@ -67,6 +66,10 @@ hr {
 
 .units a {
   color:black;
+}
+
+#feels-like {
+  font-weight: bold;
 }
 
 #main-icon {
@@ -90,14 +93,6 @@ hr {
   text-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
   margin-bottom: 5px;
-}
-
-.forecast {
-  text-align: center;
-}
-
-.weather-icon {
-  font-size: larger;
 }
 
 .search-bar {
@@ -148,9 +143,6 @@ hr {
   font-size: 16px;
 }
 
-#feels-like {
-  font-weight: bold;
-}
 .footer {
   text-align: center;
   font-size: 10px;

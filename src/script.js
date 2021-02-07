@@ -56,7 +56,6 @@ let minutes = date.getMinutes();
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
-
   return `${hours}:${minutes}`;
 }
 
@@ -103,7 +102,6 @@ for (let index = 0; index < 6; index++) {
   </div>
   `
 }
-
 }
 
 //Default city weather display
@@ -175,13 +173,13 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener ("click", currentLocationWeather);
 
 
-
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
 
 searchCity ("Prague");
 
