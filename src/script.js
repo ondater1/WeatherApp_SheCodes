@@ -54,7 +54,7 @@ function showWeather (result) {
   document.querySelector("#weather-description").innerHTML = result.data.weather[0].description;
   document.querySelector("#wind").innerHTML = `Wind: ${windSpeed} m/s`;
   document.querySelector("#humidity").innerHTML = `Humidity: ${result.data.main.humidity}%`;
-  
+  document.querySelector("#main-icon").setAttribute ("src", `http://openweathermap.org/img/wn/${result.data.weather[0].icon}@2x.png`);
 }
 
 //Default city weather display
@@ -91,7 +91,7 @@ searchForm.addEventListener("submit", handleSubmit);
   //temperatureElement.innerHTML = 19;
 //}
 
-//Current location weatehr
+//Current location weather
 
 function searchLocation (position) {
   let apiKey = "c44c1c027cb5aedabc3d66ae7a76ef48";
