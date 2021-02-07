@@ -37,7 +37,7 @@ function formatDate(dateParameter) {
     minutes = `0${minutes}`;
   }
   
-  return `Today is ${weekDay}, ${month} ${date}, ${hours}:${minutes}`;
+  return `Last update: ${weekDay}, ${month} ${date}, ${hours}:${minutes}`;
 }
 let now = new Date();
 let dateElement = document.querySelector("#current-date");
@@ -60,13 +60,24 @@ function showWeather (result) {
   document.querySelector("#main-icon").setAttribute ("src", `http://openweathermap.org/img/wn/${result.data.weather[0].icon}@2x.png`);
 }
 
+//Forecast for the searched city
+
+function showForecast(result) {
+  console.log(result.data);
+}
+
 //Default city weather display
 
 function searchCity (city) {
   let apiKey = "c44c1c027cb5aedabc3d66ae7a76ef48";
-  let apiRoot = "https://api.openweathermap.org/data/2.5/weather?";
-  let apiUrl = `${apiRoot}q=${city}&appid=${apiKey}&units=metric`;
+  let apiRoot = "https://api.openweathermap.org/data/2.5/";
+  let apiTypeWeather = "weather?";
+  let apiTypeForecast = "forecast?";
+  let apiUrl = `${apiRoot}${apiTypeWeather}q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
+
+  apiUrl = `${apiRoot}${apiTypeForecast}q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showForecast);
 }
 
 //Current City display

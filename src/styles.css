@@ -29,8 +29,8 @@ hr {
 .container {
   width: 600px;
   max-width: 90%;
-  margin: 40px auto;
-  padding: 20px 40px 20px 40px;
+  margin: 10% auto;
+  padding: 20px 40px;
   border: 1px solid #330867;
   border-radius: 15px;
   background: rgba(129, 51, 5, 0.7);
@@ -67,7 +67,7 @@ hr {
 
 #main-icon {
   display:block;
-  margin: 50px auto 0;
+  margin: 20px auto;
   width: 100px;
   background: #d5bdc2;
   border-radius: 80%;
@@ -84,6 +84,7 @@ hr {
   color: #d5bdc2;
   text-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .forecast {
@@ -120,4 +121,29 @@ hr {
   border-radius: 50px;
   padding: 1 2 1 6px;
   border: 1px;
+}
+
+.weather-forecast {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.weather-forecast h3 {
+  font-size: 20px;
+  text-align: center;
+  line-height: 15px;
+  padding-top: 7px;
+  margin-bottom: 3px;
+}
+
+.weather-forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 70px;
+  width: 70px;
+}
+
+.weather-forecast-temp {
+  text-align: center;
+  font-size: 16px;
 }
