@@ -147,3 +147,7 @@ hr {
   text-align: center;
   font-size: 16px;
 }
+
+#feels-like {
+  font-weight: bold;
+}

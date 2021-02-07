@@ -44,15 +44,31 @@ let dateElement = document.querySelector("#current-date");
 dateElement.innerHTML = formatDate (now);
 
 
+//Function of time conversion for forecast hours
+
+function formatHours (timestamp) {
+let date = new Date (timestamp);
+let hours = date.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+let minutes = date.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+
+  return `${hours}:${minutes}`;
+}
+
 //Weather of the searched city
 
 function showWeather (result) {
   let temp = Math.round(result.data.main.temp);
   let windSpeed = Math.round(result.data.wind.speed);
-
   celsiusTemperature = temp;
 
   document.querySelector("#city-displayed").innerHTML = result.data.name;
+  document.querySelector("#feels-like").innerHTML = `Feels like: ${Math.round(result.data.main.feels_like)}°C`;
   document.querySelector("#temperature").innerHTML = `${temp}`;
   document.querySelector("#weather-description").innerHTML = result.data.weather[0].description;
   document.querySelector("#wind").innerHTML = `Wind: ${windSpeed} m/s`;
@@ -63,7 +79,31 @@ function showWeather (result) {
 //Forecast for the searched city
 
 function showForecast(result) {
-  console.log(result.data);
+  
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+for (let index = 0; index < 6; index++) {
+  forecast = result.data.list[index];
+  forecastElement.innerHTML += `
+  <div class="col-2">
+      <h3>
+          ${formatHours(forecast.dt * 1000)}
+      </h3>
+      <img 
+          src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+          alt="wether icon"
+      />
+      <div class="weather-forecast-temp">
+          <strong>
+          ${Math.round(forecast.main.temp)}°C
+          </strong> 
+      </div>
+  </div>
+  `
+}
+
 }
 
 //Default city weather display
