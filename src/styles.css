@@ -48,6 +48,17 @@ hr {
   font-size: 56px;
 }
 
+.degrees .active {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: default;
+}
+
+.degrees .active:hover {
+  text-decoration: none;
+}
+
 .units {
   position: relative;
   font-size: 15px;

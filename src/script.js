@@ -49,8 +49,11 @@ dateElement.innerHTML = formatDate (now);
 function showWeather (result) {
   let temp = Math.round(result.data.main.temp);
   let windSpeed = Math.round(result.data.wind.speed);
+
+  celsiusTemperature = temp;
+
   document.querySelector("#city-displayed").innerHTML = result.data.name;
-  document.querySelector("#temperature").innerHTML = `${temp}°`;
+  document.querySelector("#temperature").innerHTML = `${temp}`;
   document.querySelector("#weather-description").innerHTML = result.data.weather[0].description;
   document.querySelector("#wind").innerHTML = `Wind: ${windSpeed} m/s`;
   document.querySelector("#humidity").innerHTML = `Humidity: ${result.data.main.humidity}%`;
@@ -79,17 +82,23 @@ searchForm.addEventListener("submit", handleSubmit);
 
 //C to F
 
-//function convertToFahrenheit(event) {
-  //event.preventDefault();
-  //let temperatureElement = document.querySelector("#temperature");
-  //temperatureElement.innerHTML = 66;
-//}
+function displayFahrenheitTemperature (event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32; 
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
 
-//function convertToCelsius(event) {
-  //event.preventDefault();
-  //let temperatureElement = document.querySelector("#temperature");
-  //temperatureElement.innerHTML = 19;
-//}
+function displayCelsiusTemperature (event) {
+  event.preventDefault();
+
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = celsiusTemperature;
+}
 
 //Current location weather
 
@@ -102,8 +111,9 @@ function searchLocation (position) {
   let apiUrl = `${apiEndPoint}lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(showWeather);
-
 }
+
+let celsiusTemperature = null;
 
 function currentLocationWeather (event) {
 event.preventDefault()
@@ -112,10 +122,15 @@ navigator.geolocation.getCurrentPosition (searchLocation);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener ("click", currentLocationWeather);
+
+
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
 searchCity ("Prague");
-
-
-
-
-
 
