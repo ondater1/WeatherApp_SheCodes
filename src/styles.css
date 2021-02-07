@@ -1,6 +1,6 @@
 body {
   background-position: center;
-  background-image: url("https://images.unsplash.com/photo-1514064019862-23e2a332a6a6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1516&q=80");
+  background-image: url("https://images.unsplash.com/reserve/aOcWqRTfQ12uwr3wWevA_14401305508_804b300054_o.jpg?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1955&q=80");
   background-size: cover;
 }
 
@@ -29,11 +29,11 @@ hr {
 .container {
   width: 600px;
   max-width: 90%;
-  margin: 10% auto;
+  margin: 5% auto;
   padding: 20px 40px;
-  border: 1px solid #330867;
+  border: 1px solid #322e38;
   border-radius: 15px;
-  background: rgba(129, 51, 5, 0.7);
+  background: rgba(62, 72, 39, 0.7);
   color: white;
   font-family: "Raleway", sans-serif;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
@@ -50,7 +50,7 @@ hr {
 
 .degrees .active {
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   cursor: default;
 }
@@ -61,21 +61,26 @@ hr {
 
 .units {
   position: relative;
-  font-size: 15px;
+  font-size: 20px;
   top: -24px;
+}
+
+.units a {
+  color:black;
 }
 
 #main-icon {
   display:block;
   margin: 20px auto;
   width: 100px;
-  background: #d5bdc2;
-  border-radius: 80%;
+  background: rgb(213, 189, 194, 0.8);
+  border-radius: 50%;
 
 }
 
 .weather-description {
   text-align: center;
+  margin-bottom: auto;
 }
 
 .city-name {
@@ -84,16 +89,11 @@ hr {
   color: #d5bdc2;
   text-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .forecast {
   text-align: center;
-}
-
-.footer {
-  text-align: center;
-  font-size: 10px;
 }
 
 .weather-icon {
@@ -149,5 +149,13 @@ hr {
 }
 
 #feels-like {
+  font-weight: bold;
+}
+.footer {
+  text-align: center;
+  font-size: 10px;
+}
+.footer a {
+  color: black;
   font-weight: bold;
 }
